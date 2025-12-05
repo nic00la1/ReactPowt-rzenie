@@ -1,9 +1,14 @@
 import React from 'react'
 
+export const DisplayDataFromTableByProps = ({ items }) => {
+  
+  const listItems = items.map(zwierze => 
+    <li>{zwierze}</li>
+  );
 
-
-export const DisplayDataFromTableByProps = () => {
   return (
-    <div>DisplayDataFromTableByProps</div>
+    <div>
+      <ul>{listItems}</ul>
+    </div>
   )
 }
