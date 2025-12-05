@@ -5,6 +5,8 @@ import { DisplayDataFromTableByProps } from './components/DisplayDataFromTableBy
 
 function App() {
 
+const zwierzeta = ["lew", "kot", "tygrys", "pantera", "pies"];
+  
   return (
     <>
     <div className='container'>
