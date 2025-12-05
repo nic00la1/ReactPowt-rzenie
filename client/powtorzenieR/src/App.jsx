@@ -5,6 +5,7 @@ import { DisplayDataFromTableByProps } from './components/DisplayDataFromTableBy
 import { DisplayObjectsFromTableByProps } from './components/DisplayObjectsFromTableByProps';
 import React, { useState } from 'react'; 
 import { DisplayButton } from './components/DisplayButton';
+import { ControlPanel } from './components/ControlPanel';
 
 function App() {
 
@@ -14,6 +15,7 @@ const [info, setInfo] = useState("");
 // Do komponentu 5
 const [showAnimals, setShowAnimals] = useState(true);
 const [showButtons, setShowButtons] = useState(true);
+const [showPanel, setShowPanel] = useState(true);
 
 const zwierzeta = ["lew", "kot", "tygrys", "pantera", "pies"];
 
@@ -30,12 +32,15 @@ const zwierzetaObiekty = [
      {/* Info na samej górze */}
     <h1 className='info-center'>Aktualne dane z info: {info}</h1>
 
-    <button onClick={() => setShowAnimals(!showAnimals)}>
-      {showAnimals ? "Ukryj listę zwierząt" : "Pokaż listę zwierząt"}
-    </button>
-    <button onClick={() => setShowButtons(!showButtons)}>
-      {showButtons ? "Ukryj literki" : "Pokaż literki"}
-    </button>
+    { showPanel &&
+      <ControlPanel showAnimals={showAnimals}
+                  setShowAnimals={setShowAnimals}
+                  showButtons={showButtons}
+                  setShowButtons={setShowButtons}
+                  showPanel={showPanel}
+                  setShowPanel={setShowPanel}/>
+    }
+    
 
     <div className='container'>
       <NicolaKaleta/>
