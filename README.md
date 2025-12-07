@@ -1,4 +1,8 @@
 # React - Powtórzenie
+
+![React Powtorzenie](https://github.com/user-attachments/assets/aa4d563d-5c86-404d-9b9f-65b3fee7d571)
+
+
 <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/4b4e0819-b78e-4555-8151-471068ba940d" />
 
 ## Komponent Wyświetlający Dostępność
