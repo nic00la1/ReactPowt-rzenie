@@ -8,6 +8,7 @@ import { DisplayButton } from './components/DisplayButton';
 import { ControlPanel } from './components/ControlPanel';
 import { AvailabilityToggle } from './components/AvailabilityToggle';
 import AnimalButtons from './components/AnimalButtons';
+import DisplayImages from './components/DisplayImages';
 
 function App() {
 
@@ -58,7 +59,7 @@ const zwierzetaObiekty = [
     
       <AvailabilityToggle/>
       <AnimalButtons animals={zwierzetaObiekty}/>
-      <div>9</div>
+      <DisplayImages/>
     </div>
     </>
   )
