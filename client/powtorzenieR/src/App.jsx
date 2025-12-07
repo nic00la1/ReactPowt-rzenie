@@ -6,6 +6,8 @@ import { DisplayObjectsFromTableByProps } from './components/DisplayObjectsFromT
 import React, { useState } from 'react'; 
 import { DisplayButton } from './components/DisplayButton';
 import { ControlPanel } from './components/ControlPanel';
+import { AvailabilityToggle } from './components/AvailabilityToggle';
+import AnimalButtons from './components/AnimalButtons';
 
 function App() {
 
@@ -32,16 +34,6 @@ const zwierzetaObiekty = [
      {/* Info na samej górze */}
     <h1 className='info-center'>Aktualne dane z info: {info}</h1>
 
-    { showPanel &&
-      <ControlPanel showAnimals={showAnimals}
-                  setShowAnimals={setShowAnimals}
-                  showButtons={showButtons}
-                  setShowButtons={setShowButtons}
-                  showPanel={showPanel}
-                  setShowPanel={setShowPanel}/>
-    }
-    
-
     <div className='container'>
       <NicolaKaleta/>
       <DisplayNameAndSurnameByProps person={{
@@ -55,9 +47,17 @@ const zwierzetaObiekty = [
       {showButtons &&
         <DisplayButton info={info} setInfo={setInfo}/>
       }
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
+        { showPanel &&
+      <ControlPanel showAnimals={showAnimals}
+                  setShowAnimals={setShowAnimals}
+                  showButtons={showButtons}
+                  setShowButtons={setShowButtons}
+                  showPanel={showPanel}
+                  setShowPanel={setShowPanel}/>
+    }
+    
+      <AvailabilityToggle/>
+      <AnimalButtons animals={zwierzetaObiekty}/>
       <div>9</div>
     </div>
     </>
